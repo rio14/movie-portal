@@ -12,15 +12,15 @@ function App() {
   return (
     <div className="flex flex-col justify-between bg-gray-50 min-h-screen">
       <LoginContext.Provider value={{ userName, setUserName }}>
-        <Header />
         <Router>
+          <Header />
           <Routes>
             <Route path="/login" caseSensitive={false} element={<Login />} />
             <Route path="/detail" caseSensitive={false} element={<Detail />} />
             <Route path="/" caseSensitive={false} element={<Home />} />
           </Routes>
+          <Footer />
         </Router>
-        <Footer />
       </LoginContext.Provider>
     </div>
   );
